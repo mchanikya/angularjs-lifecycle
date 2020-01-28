@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="lifeCycleDemoApp">
+<head>
+	<title>LifeCycle Demo</title>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body ng-controller="lifeCycleController as ctrl">
+	<my-comp
+		oneway="ctrl.oneValue"
+		twoway="ctrl.twoValue"
+		myTitle="{{ctrl.title}}"
+		>
+	</my-comp>
+	<label>oneway:</label>
+	<input type="text" name="oneValue" ng-model="ctrl.oneValue"><br>
+	<label>twoway:</label>
+	<input type="text" name="twoValue" ng-model="ctrl.twoValue"><br>
+	<label>comment:</label>
+	<input type="text" name="title" ng-model="ctrl.title"><br>
+</body>
+</html>
