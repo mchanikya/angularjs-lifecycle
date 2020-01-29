@@ -7,9 +7,10 @@
 </head>
 <body ng-controller="lifeCycleController as ctrl">
 	<my-comp
+		nvalue="{{ctrl.title}}"
 		oneway="ctrl.oneValue"
 		twoway="ctrl.twoValue"
-		myTitle="{{ctrl.title}}"
+		ng-if="ctrl.showComponent"
 		>
 	</my-comp>
 	<label>oneway:</label>
@@ -18,5 +19,6 @@
 	<input type="text" name="twoValue" ng-model="ctrl.twoValue"><br>
 	<label>comment:</label>
 	<input type="text" name="title" ng-model="ctrl.title"><br>
+	<button ng-click="ctrl.compVisibility()">show hide component</button>
 </body>
 </html>
